@@ -9,17 +9,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, ... }@attrs: {
     nixosConfigurations = {
       calculator = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit attrs; };
         system = "x86_64-linux";
-        modules = [ ./machines/calculator.nix ];
-      };
-    };
-
-    homeConfigurations = {
-      "dan@calculator" = {
-        modules = [ ./home/dan/calculator.nix ];
+        modules = 
+          [ 
+            ./machines/calculator.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.dan = import ./home/dan/calculator.nix;
+            }
+          ];
       };
     };
   };
