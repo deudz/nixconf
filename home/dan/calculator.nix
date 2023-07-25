@@ -2,6 +2,7 @@
 {
   imports = 
     [
+      ../../pkgs/firefox.nix
       ../../pkgs/emacs.nix
       ../../pkgs/discord.nix
     ];
@@ -10,4 +11,8 @@
   home.homeDirectory = "/home/dan";
 
   home.stateVersion = "23.05";
+
+  home.packages = [
+    pkgs.git
+  ];
 }

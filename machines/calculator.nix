@@ -78,13 +78,20 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    cheese
+    gnome-music
+    epiphany
+    geary
+    gnome-characters
+    totem
+    yelp
+  ]);
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    firefox
-    git
-  ];
 
   # List services that you want to enable:
 
