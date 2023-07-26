@@ -3,6 +3,7 @@
   imports = 
     [
       ../../pkgs/firefox.nix
+      ../../pkgs/desktop.nix
       ../../pkgs/emacs.nix
       ../../pkgs/discord.nix
     ];

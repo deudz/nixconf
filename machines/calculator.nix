@@ -80,15 +80,23 @@
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
+    gnome-console
   ]) ++ (with pkgs.gnome; [
     cheese
     gnome-music
     epiphany
     geary
     gnome-characters
+    gnome-weather
+    gnome-calendar
+    gnome-contacts
+    gnome-maps
+    simple-scan
     totem
     yelp
   ]);
+
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
