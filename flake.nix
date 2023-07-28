@@ -21,7 +21,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.dan = import ./home/dan/calculator.nix;
+              home-manager.users.dan = import ./home/calculator.nix;
             }
           ];
       };
