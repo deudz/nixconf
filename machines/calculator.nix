@@ -4,6 +4,7 @@
   imports =
     [
       ../modules/calculator_hardware.nix
+      ../modules/steam.nix
     ];
 
   # Bootloader
