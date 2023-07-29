@@ -15,6 +15,9 @@
       "org/gnome/desktop/wm/preferences" = {
         button-layout = ":minimize,maximize,close";
       };
+      "org/gnome/mutter" = {
+        center-new-windows = true;
+      };
     };
   };
 }
