@@ -2,9 +2,6 @@
 {
   home.packages = with pkgs; [
     zandronum
+    prismlauncher
   ];
-
-  programs.steam = {
-    enable = true;
-  };
 }

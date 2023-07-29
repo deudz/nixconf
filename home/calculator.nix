@@ -2,11 +2,7 @@
 {
   imports = 
     [
-      ../pkgs/firefox.nix
-      ../pkgs/desktop.nix
-      ../pkgs/emacs.nix
-      ../pkgs/discord.nix
-      ../home-modules/theme.nix
+      ../home-modules
     ];
 
   home.username = "dan";
