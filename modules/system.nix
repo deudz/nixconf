@@ -1,6 +1,17 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
-  imports = [ ./hardware.nix ];
+  imports = 
+    [ 
+      ./hardware.nix
+      inputs.home-manager.nixosModules.home-manager
+    ];
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users.dan = import ./home.nix;
+  };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.grub = {
     enable = true;
@@ -10,6 +21,7 @@
 
   zramSwap.enable = true;
 
+  systemd.network.enable = true;
   networking = {
     dhcpcd.enable = false;
     hostName = "calculator";
