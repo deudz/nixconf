@@ -4,7 +4,6 @@
     [
       ./git.nix
       ./emacs.nix
-      ./gaming.nix
     ];
 
   home.packages = with pkgs;
@@ -14,5 +13,6 @@
       thunderbird
       kdenlive
       vlc
+      qemu
     ];
 }
