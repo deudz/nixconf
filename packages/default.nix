@@ -1,9 +1,12 @@
 { pkgs, ... }:
 {
+  nixpkgs.config.allowUnfree = true;  
+
   imports =
     [
+      ./nixvim.nix
       ./git.nix
-      ./emacs.nix
+      ./zsh.nix
     ];
 
   home.packages = with pkgs;
@@ -14,5 +17,8 @@
       kdenlive
       vlc
       qemu
+      (pkgs.discord.override {
+        withOpenASAR = true;
+      })
     ];
 }
