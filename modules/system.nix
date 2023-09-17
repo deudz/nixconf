@@ -47,6 +47,8 @@
 
     layout = "br";
     xkbVariant = "abnt2";
+
+    wacom.enable = true;
   };
 
   hardware.bluetooth.enable = true;
