@@ -11,6 +11,9 @@
     users.dan = import ./home.nix;
   };
 
+  programs.zsh.enable = true;
+  users.users.dan.shell = pkgs.zsh;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.grub = {
