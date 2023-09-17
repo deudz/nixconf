@@ -63,6 +63,11 @@
       [
         "networkmanager"
 	"wheel"
+	"cdrom"
+	"kvm"
+	"disk"
+	"audio"
+	"input"
       ];
     };
 
