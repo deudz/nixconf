@@ -1,30 +1,24 @@
 {
-  description = "home-manager and NixOS configuration for deudz";
-
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager = { 
-      url = "github:nix-community/home-manager/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@attrs: {
-    nixosConfigurations = {
-      calculator = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit attrs; };
-        system = "x86_64-linux";
-        modules = 
-          [ 
-            ./machines/calculator.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.dan = import ./home/calculator.nix;
-            }
-          ];
-      };
+  outputs = { self, nixpkgs, home-manager }@inputs: {
+    nixosConfigurations.mashine = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [ 
+        ./devices/mashine/configuration.nix 
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "bckp";
+          home-manager.users.deudz = import ./devices/mashine/home.nix;
+        }
+      ];
     };
   };
 }
