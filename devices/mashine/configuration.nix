@@ -6,6 +6,7 @@
       ../../modules/nixos/bootloaders/grub.nix
       ../../modules/nixos/desktops/plasma6.nix
       ../../modules/nixos/pipewire.nix
+      ../../modules/nixos/docker.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
@@ -30,7 +31,7 @@
   users.users.deudz = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "docker" ];
   };
 
   system.stateVersion = "24.11";
