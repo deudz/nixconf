@@ -26,6 +26,12 @@
     pinentry-qt
   ];
 
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   programs.gpg.enable = true;
   services.gpg-agent = {
     enable = true;
