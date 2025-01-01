@@ -24,7 +24,6 @@
     spotify
     vesktop
     pinentry-qt
-    pnpm
   ];
 
   programs.gpg.enable = true;
