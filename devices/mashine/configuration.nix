@@ -6,6 +6,7 @@
       ../../modules/nixos/bootloaders/grub.nix
       ../../modules/nixos/desktops/plasma6.nix
       ../../modules/nixos/pipewire.nix
+      ../../modules/nixos/steam.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];

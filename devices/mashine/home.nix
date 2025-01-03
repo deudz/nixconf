@@ -17,7 +17,6 @@
   home.packages = with pkgs; [
     blender
     obsidian
-    steam
     keepassxc
     yt-dlp
     furnace
