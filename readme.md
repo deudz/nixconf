@@ -1,1 +1,2 @@
-im slowing this down for a bit
+my nixos and home manager configs
+yay
