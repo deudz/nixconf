@@ -23,6 +23,7 @@
     spotify
     vesktop
     pinentry-qt
+    krita
   ];
 
   programs.zsh = {
