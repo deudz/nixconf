@@ -24,6 +24,7 @@
     vesktop
     pinentry-qt
     krita
+    vlc
   ];
 
   programs.zsh = {
