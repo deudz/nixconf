@@ -26,6 +26,7 @@
     krita
     vlc
     prismlauncher
+    ardour
   ];
 
   programs.zsh = {
