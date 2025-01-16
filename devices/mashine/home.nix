@@ -25,6 +25,7 @@
     pinentry-qt
     krita
     vlc
+    prismlauncher
   ];
 
   programs.zsh = {
