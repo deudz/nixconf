@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -27,6 +27,8 @@
     vlc
     prismlauncher
     ardour
+
+    inputs.zen-browser.packages.x86_64-linux.default
   ];
 
   programs.zsh = {
