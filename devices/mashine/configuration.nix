@@ -8,6 +8,7 @@
       ../../modules/nixos/pipewire.nix
       ../../modules/nixos/steam.nix
       ../../modules/nixos/zram.nix
+      ../../modules/nixos/flatpak.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
