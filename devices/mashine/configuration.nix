@@ -9,6 +9,7 @@
       ../../modules/nixos/steam.nix
       ../../modules/nixos/zram.nix
       ../../modules/nixos/flatpak.nix
+      ../../modules/nixos/virt-manager.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
@@ -16,6 +17,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.device = "nodev";
   boot.loader.efi.canTouchEfiVariables = true;
@@ -34,7 +36,7 @@
   users.users.deudz = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "libvirtd" "kvm" ];
   };
 
   system.stateVersion = "24.11";
