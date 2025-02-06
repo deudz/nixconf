@@ -4,7 +4,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/nixos/bootloaders/grub.nix
-      ../../modules/nixos/desktops/plasma6.nix
+      ../../modules/nixos/desktops/gnome.nix
       ../../modules/nixos/pipewire.nix
       ../../modules/nixos/steam.nix
       ../../modules/nixos/zram.nix

@@ -21,9 +21,8 @@
     furnace
     spotify
     vesktop
-    pinentry-qt
+    pinentry-tty
     krita
-    vlc
     prismlauncher
     ardour
     kdenlive
@@ -35,6 +34,13 @@
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      
+    };
   };
 
   programs.gpg.enable = true;
