@@ -26,6 +26,8 @@
     prismlauncher
     ardour
     kdenlive
+    lollypop
+    gpu-screen-recorder-gtk
 
     inputs.zen-browser.packages.x86_64-linux.default
   ];

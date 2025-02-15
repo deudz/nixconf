@@ -9,6 +9,8 @@
   environment.systemPackages = with pkgs; [
     pinentry-gnome3
     showtime
+    decibels
+    gnome-sound-recorder
   ];
 
   environment.gnome.excludePackages = with pkgs; [
@@ -18,5 +20,6 @@
     gnome-tour
     epiphany
     simple-scan
+    gnome-music
   ];
 }
