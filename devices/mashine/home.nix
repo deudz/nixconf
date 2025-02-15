@@ -45,12 +45,6 @@
     };
   };
 
-  programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-qt;
-  };
-
   programs.git = {
     userName = "Danilo Soares";
     userEmail = "deudzdev@gmail.com";

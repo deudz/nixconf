@@ -7,7 +7,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pinentry-gnome3
     showtime
     decibels
     gnome-sound-recorder
@@ -22,4 +21,6 @@
     simple-scan
     gnome-music
   ];
+
+  programs.gnupg.agent.pinentryPackage = pkgs.pinentry-gnome3;
 }

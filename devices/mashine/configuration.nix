@@ -10,6 +10,7 @@
       ../../modules/nixos/zram.nix
       ../../modules/nixos/flatpak.nix
       ../../modules/nixos/virt-manager.nix
+      ../../modules/nixos/gpg.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];

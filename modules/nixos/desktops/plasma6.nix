@@ -7,8 +7,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    pinentry-qt
     vlc
   ];
+
+  programs.gnupg.agent.pinentryPackage = pkgs.pinentry-qt;
 }
   
