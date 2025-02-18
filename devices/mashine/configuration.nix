@@ -13,6 +13,7 @@
       ../../modules/nixos/gpg.nix
       ../../modules/nixos/ssh.nix
       ../../modules/nixos/davinci.nix
+      ../../modules/nixos/wacom.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
