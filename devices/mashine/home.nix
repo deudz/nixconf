@@ -25,7 +25,6 @@
     krita
     prismlauncher
     ardour
-    kdenlive
     lollypop
     gpu-screen-recorder-gtk
 

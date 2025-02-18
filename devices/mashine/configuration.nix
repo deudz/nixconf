@@ -11,6 +11,7 @@
       ../../modules/nixos/flatpak.nix
       ../../modules/nixos/virt-manager.nix
       ../../modules/nixos/gpg.nix
+      ../../modules/nixos/davinci.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
@@ -37,7 +38,7 @@
   users.users.deudz = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "kvm" ];
+    extraGroups = [ "wheel" "libvirtd" "kvm" "render" "audio" ];
   };
 
   system.stateVersion = "24.11";
