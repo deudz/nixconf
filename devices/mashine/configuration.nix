@@ -12,7 +12,6 @@
       ../../modules/nixos/virt-manager.nix
       ../../modules/nixos/gpg.nix
       ../../modules/nixos/ssh.nix
-      ../../modules/nixos/davinci.nix
       ../../modules/nixos/wacom.nix
       ../../modules/nixos/distrobox.nix
 
