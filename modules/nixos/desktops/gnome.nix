@@ -10,6 +10,11 @@
     showtime
     decibels
     gnome-sound-recorder
+    
+    gnomeExtensions.appindicator
+    gnomeExtensions.vertical-workspaces
+    gnomeExtensions.gtk4-desktop-icons-ng-ding
+    gnomeExtensions.clipboard-indicator
   ];
 
   environment.gnome.excludePackages = with pkgs; [
@@ -20,6 +25,13 @@
     epiphany
     simple-scan
     gnome-music
+    gnome-connections
+    gnome-maps
+    gnome-weather
+    gnome-logs
+    gnome-contacts
+    orca
+    yelp
   ];
 
   programs.gnupg.agent.pinentryPackage = pkgs.pinentry-gnome3;
