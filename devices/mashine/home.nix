@@ -31,6 +31,12 @@
     inputs.zen-browser.packages.x86_64-linux.default
   ];
 
+  home.shellAliases = {
+    ytbest = "yt-dlp -f bv+ba";
+    ytwav = "yt-dlp -x --audio-format wav";
+    ytmp3 = "yt-dlp -x --audio-format mp3";
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
