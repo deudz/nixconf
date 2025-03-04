@@ -9,14 +9,17 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser }@inputs: {
+  outputs = { nixpkgs, ... }@inputs: {
     nixosConfigurations.mashine = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [ 
         ./devices/mashine/configuration.nix 
-        home-manager.nixosModules.home-manager {
+        inputs.home-manager.nixosModules.home-manager {
 	  home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

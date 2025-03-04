@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../../modules/home-manager/programs/emacs.nix
     ../../modules/home-manager/programs/vscode.nix
     ../../modules/home-manager/programs/tmux.nix
     ../../modules/home-manager/programs/git.nix
