@@ -1,5 +1,4 @@
 { pkgs, inputs, ... }:
-
 {
   imports = [
     ../../modules/home-manager/programs/vscode.nix
@@ -45,7 +44,30 @@
   programs.starship = {
     enable = true;
     settings = {
-      
+      add_newline = false;
+      line_break.disabled = true;
+      username = {
+        show_always = true;
+        format = "[$user]($style)";
+        style_user = "bold yellow";
+      };
+      hostname = {
+        ssh_only = false;
+        format = "[$hostname]($style)";
+        style = "bold cyan";
+      };
+      directory = {
+        format = "[$path]($style)[$read_only]($read_only_style)";
+        style = "bold purple";
+        home_symbol = "~/";
+        truncation_symbol = ".../";
+        read_only = "\\[RO\\]";
+      };
+      character = {
+        success_symbol = "[\\$](bold green)";
+        error_symbol = "[\\$](bold red)";
+      };
+      format = "[<](bold red)$username[@](bold green)$hostname $directory[>](bold red) $all$character";
     };
   };
 
