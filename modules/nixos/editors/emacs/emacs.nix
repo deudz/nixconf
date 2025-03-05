@@ -7,6 +7,7 @@
   services.emacs = {
     enable = true;
     startWithGraphical = true;
+    defaultEditor = true;
     package = (pkgs.emacsWithPackagesFromUsePackage {
       package = pkgs.emacs-unstable;
       config = ./config.el;
