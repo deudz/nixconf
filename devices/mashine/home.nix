@@ -60,7 +60,6 @@
       directory = {
         format = "[$path]($style)[$read_only]($read_only_style)";
         style = "bold purple";
-        home_symbol = "~/";
         truncation_symbol = ".../";
         read_only = "\\[RO\\]";
       };
