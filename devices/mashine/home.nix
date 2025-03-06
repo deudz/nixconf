@@ -23,6 +23,7 @@
     krita
     prismlauncher
     ardour
+    audacity
     lollypop
     gpu-screen-recorder-gtk
     libreoffice
