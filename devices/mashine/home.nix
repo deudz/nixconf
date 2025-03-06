@@ -25,6 +25,7 @@
     ardour
     lollypop
     gpu-screen-recorder-gtk
+    libreoffice
 
     inputs.zen-browser.packages.x86_64-linux.default
   ];
