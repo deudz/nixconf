@@ -24,6 +24,7 @@
     prismlauncher
     ardour
     audacity
+    ffmpeg
     deadbeef
     gpu-screen-recorder-gtk
     libreoffice
