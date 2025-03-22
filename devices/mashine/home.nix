@@ -24,7 +24,7 @@
     prismlauncher
     ardour
     audacity
-    lollypop
+    deadbeef
     gpu-screen-recorder-gtk
     libreoffice
 
