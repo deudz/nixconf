@@ -17,6 +17,7 @@
       ../../modules/nixos/ssh.nix
       ../../modules/nixos/wacom.nix
       ../../modules/nixos/distrobox.nix
+      ../../modules/nixos/nix-helper.nix
 
       ../../modules/nixos/shells/zsh.nix
     ];
