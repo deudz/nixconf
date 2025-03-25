@@ -21,6 +21,7 @@
     vesktop
     pinentry-tty
     krita
+    gimp
     prismlauncher
     ardour
     audacity
