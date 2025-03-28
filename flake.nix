@@ -14,19 +14,17 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
-    nixosConfigurations.mashine = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [ 
-        ./devices/mashine/configuration.nix 
-        inputs.home-manager.nixosModules.home-manager {
-	  home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "bckp";
-          home-manager.users.deudz = import ./devices/mashine/home.nix;
-        }
-      ];
+  outputs = { nixpkgs, home-manager, ... }@inputs:
+    let
+      utils = import ./lib/utils.nix
+        { inherit nixpkgs home-manager inputs; };
+      inherit (utils) mkHomeManagerConfiguration mkNixosConfiguration;
+    in {
+      nixosConfigurations = {
+        mashine = mkNixosConfiguration "mashine";
+      };
+      homeConfigurations = {
+        deudz = mkHomeManagerConfiguration "x86_64-linux" "mashine";
+      };
     };
-  };
 }
