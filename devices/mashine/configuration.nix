@@ -4,20 +4,20 @@
     [
       ./hardware-configuration.nix
 
-      ../../modules/nixos/bootloaders/grub.nix
-      ../../modules/nixos/desktops/gnome.nix
-      ../../modules/nixos/pipewire.nix
-      ../../modules/nixos/steam.nix
-      ../../modules/nixos/zram.nix
-      ../../modules/nixos/flatpak.nix
-      ../../modules/nixos/virt-manager.nix
-      ../../modules/nixos/gpg.nix
-      ../../modules/nixos/ssh.nix
-      ../../modules/nixos/wacom.nix
-      ../../modules/nixos/distrobox.nix
-      ../../modules/nixos/nix-helper.nix
+      ../../system/bootloaders/grub.nix
+      ../../system/desktops/gnome.nix
+      ../../system/pipewire.nix
+      ../../system/steam.nix
+      ../../system/zram.nix
+      ../../system/flatpak.nix
+      ../../system/virt-manager.nix
+      ../../system/gpg.nix
+      ../../system/ssh.nix
+      ../../system/wacom.nix
+      ../../system/distrobox.nix
+      ../../system/nix-helper.nix
 
-      ../../modules/nixos/shells/zsh.nix
+      ../../system/shells/zsh.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

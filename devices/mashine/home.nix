@@ -1,11 +1,11 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ../../modules/home-manager/packages.nix
-    ../../modules/home-manager/vscode.nix
-    ../../modules/home-manager/emacs.nix
-    ../../modules/home-manager/tmux.nix
-    ../../modules/home-manager/git.nix
+    ../../home/packages.nix
+    ../../home/vscode.nix
+    ../../home/emacs.nix
+    ../../home/tmux.nix
+    ../../home/git.nix
   ];
 
   home.username = "deudz";
