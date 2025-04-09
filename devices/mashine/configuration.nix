@@ -4,8 +4,6 @@
     [
       ./hardware-configuration.nix
 
-      ../../modules/nixos/editors/emacs/emacs.nix
-
       ../../modules/nixos/bootloaders/grub.nix
       ../../modules/nixos/desktops/gnome.nix
       ../../modules/nixos/pipewire.nix
