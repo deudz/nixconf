@@ -1,0 +1,13 @@
+#+title: NixOS & Home-Manager System Flake
+#+author: Danilo (deudz) Soares
+#+options: toc:nil
+
+This is my NixOS system configuration. Don't be afraid to use this as a template.
+
+* Directories
+Explanation of the directories:
+- =devices=: contains machines (hosts)
+- =dotfiles=: has dotfiles used by home-manager
+- =home=: contains home modules
+- =lib=: houses utilities
+- =system=: contains system modules
