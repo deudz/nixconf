@@ -25,6 +25,7 @@
     epiphany
     simple-scan
     gnome-music
+    gnome-console
     gnome-connections
     gnome-maps
     gnome-weather
