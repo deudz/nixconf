@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
+    alacritty
     blender
     obsidian
     keepassxc
@@ -20,6 +21,8 @@
     libreoffice
     git
     tmux
+    godot
+    libresprite
 
     inputs.zen-browser.packages.x86_64-linux.default
   ];
