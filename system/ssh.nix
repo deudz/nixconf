@@ -1,5 +1,4 @@
 { ... }:
-
 {
   services.sshd.enable = true;
 }
