@@ -3,7 +3,8 @@
   imports = [
     ../../home/packages.nix
     ../../home/dotfiles.nix
-    
+
+    ../../home/spicetify.nix
     ../../home/emacs.nix
     ../../home/vscode.nix
   ];

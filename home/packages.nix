@@ -7,7 +7,6 @@
     keepassxc
     yt-dlp
     furnace
-    spotify
     vesktop
     pinentry-tty
     krita
