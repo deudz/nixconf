@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
 
       ../../system/bootloaders/grub.nix
-      ../../system/desktops/river.nix
+      ../../system/desktops/bspwm.nix
       ../../system/pipewire.nix
       ../../system/steam.nix
       ../../system/zram.nix
