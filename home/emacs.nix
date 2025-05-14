@@ -1,20 +1,12 @@
 { pkgs, config, ... }:
-let
-  mkSymlink = location: config.lib.file.mkOutOfStoreSymlink location;
-  myEmacs = with pkgs; (emacsPackagesFor emacs).emacsWithPackages (
-    epkgs: [
-      epkgs.treesit-grammars.with-all-grammars
-      epkgs.tree-sitter-langs
-    ]);
-in
-{  
+{
   home.packages = [
-    myEmacs
+    pkgs.emacs
   ];
 
   services.emacs = {
     enable = true;
-    package = myEmacs;
+    package = pkgs.emacs;
     socketActivation.enable = true;
     startWithUserSession = "graphical";
   };
