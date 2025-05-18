@@ -23,6 +23,13 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  services.xserver.xkb = {
+    layout = "br";
+    model = "pc104";
+    variant = "abnt2";
+  };
+  console.useXkbConfig = true;
+
   boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.device = "nodev";
