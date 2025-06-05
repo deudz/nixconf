@@ -1,0 +1,17 @@
+mpd_host = "0.0.0.0"
+mpd_port = "6600"
+
+mpd_music_dir = "~/Músicas/mpd"
+
+user_interface = "alternative"
+playlist_display_mode = "classic"
+browser_display_mode = "classic"
+
+visualizer_data_source = "/tmp/visualizer.fifo"
+visualizer_output_name = "Visualizer"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = ":|"
+visualizer_fps = "60"
+visualizer_spectrum_smooth_look = "yes"
+visualizer_spectrum_smooth_look_legacy_chars = "no"
