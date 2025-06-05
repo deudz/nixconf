@@ -1,4 +1,7 @@
 { pkgs, inputs, ... }:
+let
+    myncmpcpp = pkgs.ncmpcpp.override { visualizerSupport = true; };
+in
 {
   home.packages = with pkgs; [
     alacritty
@@ -15,7 +18,8 @@
     ardour
     audacity
     ffmpeg
-    deadbeef
+    myncmpcpp
+    mpd
     gpu-screen-recorder-gtk
     libreoffice
     git

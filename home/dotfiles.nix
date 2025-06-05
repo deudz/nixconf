@@ -32,4 +32,10 @@ in
   # rofi
   xdg.configFile."rofi/config.rasi".source = mkSymlink "rofi/config.rasi";
   xdg.configFile."rofi/bismuth.rasinc".source = mkSymlink "rofi/bismuth.rasinc";
+
+  # mpd
+  xdg.configFile."mpd/mpd.conf".source = mkSymlink "mpd/mpd.conf";
+
+  # ncmpcpp
+  xdg.configFile."ncmpcpp/config".source = mkSymlink "ncmpcpp/config";
 }
