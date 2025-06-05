@@ -1,0 +1,16 @@
+[user]
+	email = deudzdev@gmail.com
+	name = Danilo Soares
+	signingkey = 42B95F7C4FC2CA13FD4E86B6F0D8B7CE0B7EC148
+[commit]
+	verbose = true
+	gpgsign = true
+[status]
+	short = true
+[gpg]
+	format = openpgp
+[log]
+	abbrevCommit = true
+	decorate = short
+	showroot = true
+	date = human

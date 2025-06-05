@@ -15,4 +15,12 @@ in
 
   # gitconfig
   home.file.".gitconfig".source = mkSymlink "gitconfig";
+
+  # bspwm
+  xdg.configFile."bspwm/bspwmrc".source = mkSymlink "bspwm/bspwmrc";
+  # sxhkd
+  xdg.configFile."sxhkd/sxhkdrc".source = mkSymlink "sxhkd/sxhkdrc";
+
+  # picom
+  xdg.configFile."picom/picom.conf".source = mkSymlink "picom/picom.conf";
 }

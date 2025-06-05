@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+feh --bg-fill ~/.config/bspwm/wallpaper.png
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x polybar > /dev/null || polybar -r &
+pgrep -x picom > /dev/null || picom &
+
+bspc monitor -d 1 2 3 4 5
+
+bspc rule -a Alacritty state=floating
+
+bspc config single_monocle true
+bspc config gapless_monocle true
+bspc config borderless_monocle true
+
+bspc config focus_follows_pointer true
+
+bspc config window_gap 12
+bspc config split_ratio 0.5
+
+while bspc subscribe -c 1 node_focus; do
+    bspc config border_width 2
+    bspc config -n focused border_width 0
+    bspc config normal_border_color "#4b9cdb"
+done
