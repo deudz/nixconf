@@ -1,0 +1,65 @@
+* {
+  bg: #181818;
+  fg: #d0dfe9;
+  blue: #4b9cdb;
+
+  main-color: var(blue);
+  selection-fg: var(bg);
+  border-color: var(main-color);
+
+  background-color: transparent;
+  text-color: var(fg);
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  border: none;
+}
+
+window {
+  width: 35%;
+}
+
+mainbox {
+  children: [ message, inputbar, listview ];
+}
+
+element {
+  orientation: horizontal;
+  padding: 6;
+  background-color: var(bg);
+}
+
+element-icon {
+  size: 24px;
+}
+
+element.selected {
+  background-color: var(main-color);
+}
+
+element-text.selected {
+  text-color: var(selection-fg);
+}
+
+inputbar {
+  background-color: var(main-color);
+  padding: 9;
+  spacing: 6;
+}
+
+listview {
+  margin: 0px 32px;
+  background-color: var(bg);
+  border: 0 0 6px 0;
+  lines: 12;
+}
+
+prompt, entry {
+  text-color: var(bg);
+}
+
+textbox {
+  margin: 12px 0px;
+  background-color: var(bg);
+  border: 3px;
+}

@@ -16,6 +16,9 @@ in
   # gitconfig
   home.file.".gitconfig".source = mkSymlink "gitconfig";
 
+  # alacritty
+  xdg.configFile."alacritty/alacritty.toml".source = mkSymlink "alacritty/alacritty.toml";
+
   # bspwm
   xdg.configFile."bspwm/bspwmrc".source = mkSymlink "bspwm/bspwmrc";
   xdg.configFile."bspwm/wallpaper.png".source = mkSymlink "bspwm/wallpaper.png";
@@ -25,4 +28,8 @@ in
 
   # picom
   xdg.configFile."picom/picom.conf".source = mkSymlink "picom/picom.conf";
+
+  # rofi
+  xdg.configFile."rofi/config.rasi".source = mkSymlink "rofi/config.rasi";
+  xdg.configFile."rofi/bismuth.rasinc".source = mkSymlink "rofi/bismuth.rasinc";
 }
