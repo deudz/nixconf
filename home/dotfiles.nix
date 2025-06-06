@@ -18,6 +18,8 @@ in
 
   # bspwm
   xdg.configFile."bspwm/bspwmrc".source = mkSymlink "bspwm/bspwmrc";
+  xdg.configFile."bspwm/wallpaper.png".source = mkSymlink "bspwm/wallpaper.png";
+
   # sxhkd
   xdg.configFile."sxhkd/sxhkdrc".source = mkSymlink "sxhkd/sxhkdrc";
 
