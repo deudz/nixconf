@@ -27,10 +27,8 @@ super + {q,w}
 	bspc node -{c,k}
 
 # send the newest marked node to the newest preselected node
-super + s
-    bspc node @parent -R 90
-super + shift + s
-    bspc node @parent -R -90
+super + {_, shift +,} s
+    bspc node @parent -R {90, -90}
 
 # swap the current node and the biggest window
 super + g
@@ -41,8 +39,11 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,@space,f}
-	bspc node -t ~{tiled,pseudo_tiled,floating,fullscreen}
+super + {t,p}
+	bspc node -t {tiled,pseudo_tiled}
+
+super + {@space,f}
+	bspc node -t ~{floating,fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
