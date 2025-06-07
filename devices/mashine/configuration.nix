@@ -6,6 +6,7 @@
 
       ../../system/bootloaders/grub.nix
       ../../system/desktops/bspwm.nix
+      ../../system/bluetooth.nix
       ../../system/pipewire.nix
       ../../system/steam.nix
       ../../system/zram.nix
