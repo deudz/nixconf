@@ -10,9 +10,12 @@
     showtime
     decibels
     gnome-sound-recorder
+    blackbox-terminal
     
+    gnomeExtensions.arcmenu
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.user-themes
     gnomeExtensions.appindicator
-    gnomeExtensions.vertical-workspaces
     gnomeExtensions.gtk4-desktop-icons-ng-ding
     gnomeExtensions.clipboard-indicator
   ];
@@ -25,9 +28,9 @@
     epiphany
     simple-scan
     gnome-music
-    gnome-console
     gnome-connections
     gnome-maps
+    gnome-console
     gnome-weather
     gnome-logs
     gnome-contacts
