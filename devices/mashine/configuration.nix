@@ -1,11 +1,12 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   imports =
     [
       ./hardware-configuration.nix
 
       ../../system/bootloaders/grub.nix
-      ../../system/desktops/bspwm.nix
+      ../../system/desktops/gnome.nix
+      ../../system/network.nix
       ../../system/bluetooth.nix
       ../../system/pipewire.nix
       ../../system/steam.nix
@@ -31,21 +32,23 @@
   };
   console.useXkbConfig = true;
 
-  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];
+  boot.kernelParams = [ "intel_iommu=on" "iommu=pt" "vfio-pci.ids=1002:6fdf,1002:aaf0" ];
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.device = "nodev";
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.kernelModules = [
+    "vfio_pci"
+    "vfio"
+    "vfio_iommu_type1"
+
+    "amdgpu"
+  ];
+
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "pt_BR.UTF-8";
 
-  networking = {
-    hostName = "mashine";
-    useDHCP = false;
-    networkmanager.enable = true;
-    networkmanager.dns = "none";
-    nameservers = [ "1.1.1.1" "1.0.0.1" ];
-  };  
+  networking.hostName = "mashine";
 
   users.users.deudz = {
     shell = pkgs.zsh;
