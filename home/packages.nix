@@ -4,7 +4,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    alacritty
+#    alacritty
     blender
     obsidian
     keepassxc
@@ -27,6 +27,6 @@ in
     godot
     libresprite
 
-    inputs.zen-browser.packages.x86_64-linux.default
+    inputs.zen-browser.packages.${system}.default
   ];
 }

@@ -10,7 +10,7 @@
     home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
 
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = { inherit inputs system; };
       modules = [ ../devices/${host}/home.nix ];
     };
 }
