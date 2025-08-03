@@ -11,13 +11,23 @@ ytopus() {
   yt-dlp -x --audio-format opus "$1" -o "$2"
 }
 
+ytmemes() {
+    yt-dlp --merge-output-format mp4 --remux-video mp4 \
+	   -S vcodec:vp9,lang,quality,res,fps,acoded:opus,channels:1,asr:44100 \
+	   "$1" -o "$2"
+}
+
 ytmusic() {
   yt-dlp -x --audio-format opus --add-metadata --embed-thumbnail "$1" -o "$2"
 }
 
+bindkey "^H" backward-kill-word
+
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c"
 export ALTERNATE_EDITOR="emacs"
+
+export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
 alias ema="emacsclient -t"
 alias em="emacsclient -c"
@@ -25,13 +35,20 @@ alias em="emacsclient -c"
 alias hms="home-manager switch --flake ~/nix"
 alias nos="nixos-rebuild switch --flake ~/nix"
 
+autoload -Uz cdr
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 setopt PROMPT_SUBST
-PROMPT='%B%F{red}<%F{yellow}%n%F{green}@%F{blue}%m %F{magenta}%~%F{red}>%f${vcs_info_msg_0_} $%b '
+PROMPT='%B%F{red}[%F{yellow}%n%F{green}@%F{blue}%m %F{magenta}%~%F{red}]%f${vcs_info_msg_0_} $%b '
 
 zstyle ":vcs_info:*" formats " %F{green}%b%f%m%u%c"
 zstyle ":vcs_info:*" actionformats " %F{green}%b%f %F{yellow}%a%f %m%u%c"
 zstyle ":vcs_info:*" check-for-changes true
 zstyle ":vcs_info:*" stagedstr "%F{yellow}*%f"
 zstyle ":vcs_info:*" unstagedstr "%F{red}!%f"
+
+autoload -Uz compinit
+compinit
+zstyle ":completion:*" menu select
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"

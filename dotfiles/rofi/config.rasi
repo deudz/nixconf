@@ -2,6 +2,13 @@ configuration {
     show-icons: true;
     sidebar-mode: false;
     display-drun: ">";
+
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-remove-to-eol: "";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-clear-line: "Control+h";
+    kb-remove-char-back: "BackSpace,Shift+BackSpace";
 }
 
 @theme "bismuth"
