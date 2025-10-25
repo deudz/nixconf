@@ -25,6 +25,12 @@
       options = [ "subvol=@home" ];
     };
 
+  fileSystems."/tera" =
+    { device = "/dev/disk/by-uuid/e27eee9d-fe42-475e-ad83-690d5caf72a0";
+      fsType = "ext4";
+      options = [ "relatime" ];
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/5F79-5B54";
       fsType = "vfat";

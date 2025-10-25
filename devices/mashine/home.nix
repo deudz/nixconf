@@ -5,8 +5,8 @@
     ../../home/dotfiles.nix
 
     ../../home/spicetify.nix
-    ../../home/emacs.nix
-    ../../home/vscode.nix
+#    ../../home/emacs.nix
+#    ../../home/vscode.nix
   ];
 
   home.username = "deudz";

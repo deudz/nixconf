@@ -17,6 +17,7 @@ in
     prismlauncher
     ardour
     audacity
+    gamemode
     ffmpeg
     myncmpcpp
     mpd
@@ -26,6 +27,8 @@ in
     tmux
     godot
     libresprite
+    zed-editor
+    appimage-run
 
     inputs.zen-browser.packages.${system}.default
   ];

@@ -21,6 +21,14 @@ ytmusic() {
   yt-dlp -x --audio-format opus --add-metadata --embed-thumbnail "$1" -o "$2"
 }
 
+nt() {
+  if [ -z "$2" ]; then
+    nix-shell -p "$1" --run "$1"
+  else
+    nix-shell -p "$1" --run "$2"
+  fi
+}
+
 bindkey "^H" backward-kill-word
 
 export EDITOR="emacsclient -t"

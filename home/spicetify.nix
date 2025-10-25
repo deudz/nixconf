@@ -13,6 +13,5 @@ in
       adblockify
       hidePodcasts
     ];
-    theme = spicePkgs.themes.text;
   };
 }

@@ -5,14 +5,15 @@
       ./hardware-configuration.nix
 
       ../../system/bootloaders/grub.nix
-      ../../system/desktops/gnome.nix
+      ../../system/desktops/plasma6.nix
+      ../../system/users/deudz.nix
       ../../system/network.nix
       ../../system/bluetooth.nix
       ../../system/pipewire.nix
       ../../system/steam.nix
       ../../system/zram.nix
       ../../system/flatpak.nix
-      ../../system/virt-manager.nix
+#      ../../system/virt-manager.nix
       ../../system/gpg.nix
       ../../system/ssh.nix
       ../../system/wacom.nix
@@ -49,13 +50,6 @@
   i18n.defaultLocale = "pt_BR.UTF-8";
 
   networking.hostName = "mashine";
-
-  users.users.deudz = {
-    shell = pkgs.zsh;
-    initialPassword = "123";
-    isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "kvm" "render" "audio" ];
-  };
 
   system.stateVersion = "24.11";
 }
