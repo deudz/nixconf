@@ -31,9 +31,7 @@ nt() {
 
 bindkey "^H" backward-kill-word
 
-export EDITOR="emacsclient -t"
-export VISUAL="emacsclient -c"
-export ALTERNATE_EDITOR="emacs"
+export EDITOR="nano"
 
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
@@ -42,6 +40,8 @@ alias em="emacsclient -c"
 
 alias hms="home-manager switch --flake ~/nix"
 alias nos="nixos-rebuild switch --flake ~/nix"
+
+eval "$(direnv hook zsh)"
 
 autoload -Uz cdr
 
