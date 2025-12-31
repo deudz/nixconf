@@ -1,11 +1,11 @@
 { pkgs, inputs, ... }:
-let
-    myncmpcpp = pkgs.ncmpcpp.override { visualizerSupport = true; };
-in
+#let
+#    myncmpcpp = pkgs.ncmpcpp.override { visualizerSupport = true; };
+#in
 {
   home.packages = with pkgs; [
 #    alacritty
-    blender
+    blender-hip
     obsidian
     keepassxc
     yt-dlp
@@ -15,21 +15,24 @@ in
     krita
     gimp
     prismlauncher
-    ardour
+#    ardour
     audacity
     gamemode
     ffmpeg
-    myncmpcpp
+#    myncmpcpp
     mpd
     gpu-screen-recorder-gtk
-    libreoffice
     git
     tmux
     godot
     libresprite
     zed-editor
     appimage-run
-
+    freerdp
+    docker-compose
+    lutris-free
+    schismtracker
+    
     inputs.zen-browser.packages.${system}.default
   ];
 }
