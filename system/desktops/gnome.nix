@@ -6,18 +6,69 @@
     displayManager.gdm.enable = true;
   };
 
+  environment.etc = {
+    "xdg/monitors.xml".text = ''
+      <monitors version="2">
+	<configuration>
+	  <layoutmode>physical</layoutmode>
+	  <logicalmonitor>
+	    <x>0</x>
+	    <y>0</y>
+	    <scale>1</scale>
+	    <primary>yes</primary>
+	    <monitor>
+	      <monitorspec>
+                <connector>HDMI-1</connector>
+	        <vendor>PHO</vendor>
+	        <product>PMG24M23T</product>
+	        <serial>000000000000</serial>
+	      </monitorspec>
+	        <mode>
+	          <width>1920</width>
+	          <height>1080</height>
+	          <rate>179.998</rate>
+	        </mode>
+	    </monitor>
+	  </logicalmonitor>
+        </configuration>
+        <configuration>
+          <layoutmode>physical</layoutmode>
+          <logicalmonitor>
+          <x>0</x>
+          <y>0</y>
+          <scale>1</scale>
+          <primary>yes</primary>
+          <monitor>
+            <monitorspec>
+              <connector>DP-3</connector>
+              <vendor>PHO</vendor>
+              <product>PMG24M23T</product>
+              <serial>000000000000</serial>
+            </monitorspec>
+            <mode>
+              <width>1920</width>
+              <height>1080</height>
+              <rate>179.998</rate>
+            </mode>
+          </monitor>
+          </logicalmonitor>
+        </configuration>
+      </monitors>
+    '';
+  };
+
   environment.systemPackages = with pkgs; [
+    gnome-themes-extra
     showtime
     decibels
-    gnome-sound-recorder
-    blackbox-terminal
     
     gnomeExtensions.arcmenu
-    gnomeExtensions.dash-to-dock
+    gnomeExtensions.dash-to-panel
     gnomeExtensions.user-themes
     gnomeExtensions.appindicator
-    gnomeExtensions.gtk4-desktop-icons-ng-ding
     gnomeExtensions.clipboard-indicator
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.just-perfection
   ];
 
   environment.gnome.excludePackages = with pkgs; [
@@ -30,7 +81,6 @@
     gnome-music
     gnome-connections
     gnome-maps
-    gnome-console
     gnome-weather
     gnome-logs
     gnome-contacts
