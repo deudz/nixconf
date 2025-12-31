@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
 
       ../../system/bootloaders/grub.nix
-      ../../system/desktops/plasma6.nix
+      ../../system/desktops/gnome.nix
       ../../system/users/deudz.nix
       ../../system/network.nix
       ../../system/bluetooth.nix
@@ -19,6 +19,7 @@
       ../../system/wacom.nix
       ../../system/distrobox.nix
       ../../system/nix-helper.nix
+      ../../system/fonts.nix
 
       ../../system/shells/zsh.nix
     ];
@@ -50,6 +51,14 @@
   i18n.defaultLocale = "pt_BR.UTF-8";
 
   networking.hostName = "mashine";
+
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+  hardware.graphics.extraPackages = [
+    pkgs.rocmPackages.clr.icd
+  ];
+  environment.variables.ROC_ENABLE_PRE_VEGA = "1";
 
   system.stateVersion = "24.11";
 }

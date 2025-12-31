@@ -5,6 +5,7 @@
     ../../home/dotfiles.nix
 
     ../../home/spicetify.nix
+    ../../home/devshell.nix
 #    ../../home/emacs.nix
 #    ../../home/vscode.nix
   ];
