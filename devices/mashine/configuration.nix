@@ -48,7 +48,10 @@
   ];
 
   time.timeZone = "America/Sao_Paulo";
-  i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    extraLocales = [ "pt_BR.UTF-8/UTF-8" ];
+  };
 
   networking.hostName = "mashine";
 
@@ -62,4 +65,3 @@
 
   system.stateVersion = "24.11";
 }
-
