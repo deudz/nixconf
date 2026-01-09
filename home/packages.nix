@@ -5,7 +5,7 @@
 {
   home.packages = with pkgs; [
 #    alacritty
-    blender-hip
+    blender
     obsidian
     keepassxc
     yt-dlp
