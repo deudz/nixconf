@@ -4,7 +4,7 @@
 #in
 {
   home.packages = with pkgs; [
-#    alacritty
+    # alacritty
     blender
     obsidian
     keepassxc
@@ -15,23 +15,25 @@
     krita
     gimp
     prismlauncher
-#    ardour
+    # ardour
     audacity
     gamemode
     ffmpeg
-#    myncmpcpp
+    # myncmpcpp
     mpd
     gpu-screen-recorder-gtk
     git
     tmux
     godot
     libresprite
-    zed-editor
+    # zed-editor
     appimage-run
     freerdp
     docker-compose
     lutris-free
     schismtracker
+    neovide
+    neovim
     
     inputs.zen-browser.packages.${system}.default
   ];
