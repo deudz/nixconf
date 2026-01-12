@@ -4,8 +4,8 @@
     [
       ./hardware-configuration.nix
 
-      ../../system/bootloaders/grub.nix
-      ../../system/desktops/gnome.nix
+      ../../system/bootloaders/limine.nix
+      ../../system/desktops/plasma6.nix
       ../../system/users/deudz.nix
       ../../system/network.nix
       ../../system/bluetooth.nix
