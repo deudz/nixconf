@@ -3,14 +3,13 @@ let
   # 0 == networkmanager
   # 1 == networkd
   type = 0;
+  dns = [ "1.1.1.1" "1.0.0.1" ];
 in
 if type == 0 then
 {
   networking = {
-    useDHCP = false;
     networkmanager.enable = true;
-    networkmanager.dns = "none";
-    nameservers = [ "1.1.1.1" "1.0.0.1" ];
+    networkmanager.insertNameservers = dns;
   };
 }
 else if type == 1 then
@@ -19,7 +18,7 @@ else if type == 1 then
     dhcpcd.enable = false;
     useNetworkd = true;
     useDHCP = true;
-    nameservers = [ "1.1.1.1" "1.0.0.1" ];
+    nameservers = dns;
   };
 
   systemd.network = {
